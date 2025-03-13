@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 217 91% 60%;
+    --primary: 270 73% 60%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -23,7 +23,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 216 34% 17%;
+    --accent: 270 73% 60%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,6 +34,36 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 240 15% 15%;
+    --foreground: 0 0% 95%;
+
+    --card: 240 19% 13%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 19% 13%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 270 73% 60%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 19% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 19% 20%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 270 73% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 12% 27%;
+    --input: 240 12% 27%;
+    --ring: 240 12% 70%;
   }
 
   @font-face {
@@ -92,11 +122,11 @@
 
 @layer utilities {
   .glass {
-    @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-glass transition-all;
+    @apply bg-white/10 backdrop-blur-lg border border-white/10 shadow-glass transition-all dark:bg-background/50 dark:border-white/5;
   }
   
   .glass:hover {
-    @apply shadow-glass-hover bg-white/80;
+    @apply shadow-glass-hover bg-white/20 dark:bg-background/60;
   }
   
   .text-balance {
@@ -104,7 +134,7 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent;
   }
   
   .section-padding {
@@ -121,5 +151,13 @@
   
   .button-shadow:hover {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark-card {
+    @apply bg-card border border-border/40 rounded-xl shadow-md;
+  }
+
+  .dark-glass {
+    @apply backdrop-blur-lg bg-background/50 border border-border/50 rounded-xl;
   }
 }

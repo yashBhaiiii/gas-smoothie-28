@@ -98,6 +98,14 @@ export default {
 					700: '#047857',
 					800: '#065F46',
 					900: '#064E3B'
+				},
+				dark: {
+					background: '#1A1F2C',
+					foreground: '#F9FAFB',
+					card: '#221F26',
+					border: '#403E43',
+					muted: '#333333',
+					accent: '#8A63D2'
 				}
 			},
 			boxShadow: {

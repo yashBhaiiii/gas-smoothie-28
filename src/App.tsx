@@ -68,6 +68,8 @@ const queryClient = new QueryClient();
 const App = () => {
   useEffect(() => {
     addAnimationStyles();
+    // Add dark class to the document to enable dark mode
+    document.documentElement.classList.add('dark');
   }, []);
 
   return (
