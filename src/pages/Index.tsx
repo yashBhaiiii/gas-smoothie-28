@@ -1,11 +1,8 @@
 
 import { useEffect } from "react";
-import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import Hero from "../components/sections/Hero";
-import AboutGas from "../components/sections/AboutGas";
-import Strategies from "../components/sections/Strategies";
-import Features from "../components/sections/Features";
+import DarkHeader from "../components/layout/DarkHeader";
 
 const Index = () => {
   // Smooth scroll implementation
@@ -42,13 +39,10 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <div className="min-h-screen bg-[#1a1f2c]">
+      <DarkHeader />
       <main>
         <Hero />
-        <AboutGas />
-        <Strategies />
-        <Features />
       </main>
       <Footer />
     </div>

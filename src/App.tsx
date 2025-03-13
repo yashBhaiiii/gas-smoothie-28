@@ -16,12 +16,14 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/get-started" element={<GetStarted />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <div className="dark">
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/get-started" element={<GetStarted />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
