@@ -28,13 +28,13 @@ const Header = () => {
         "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ease-in-out px-4 md:px-6",
         {
           "py-4 bg-transparent": !isScrolled,
-          "py-3 bg-background/80 backdrop-blur-md shadow-sm border-b border-border/50": isScrolled,
+          "py-3 bg-white/80 backdrop-blur-md shadow-sm": isScrolled,
         }
       )}
     >
       <div className="container mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+          <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
             <span className="text-white font-bold">A</span>
           </div>
           <span className="text-lg font-medium font-display">Aptos Gas</span>
@@ -90,7 +90,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md shadow-md p-4 animate-fade-in border-t border-border/50">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-md p-4 animate-fade-in">
           <nav className="flex flex-col space-y-4 mb-4">
             <NavLinks />
           </nav>
@@ -122,7 +122,7 @@ const NavLinks = () => {
         <a
           key={link.name}
           href={link.href}
-          className="text-sm font-medium text-foreground/80 link-hover"
+          className="text-sm font-medium text-gray-700 link-hover"
         >
           {link.name}
         </a>
