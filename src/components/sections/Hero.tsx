@@ -1,6 +1,7 @@
 
 import { Button } from "../ui/button";
 import { Sparkles, ArrowRight, Download } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -31,10 +32,12 @@ const Hero = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <Button size="lg" className="group">
-              Get Started with Optimization
-              <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <Link to="/get-started">
+              <Button size="lg" className="group">
+                Get Started with Optimization
+                <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
             <Button variant="outline" size="lg" className="group">
               <Download size={16} className="mr-2" />
               Download Optimization Checklist
