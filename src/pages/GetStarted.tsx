@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
-import { ArrowLeft, ArrowRight, Check, Lightning, BookOpen, Tool, Zap } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, BookOpen, Zap, BoltIcon, WrenchIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -80,7 +80,12 @@ const GetStarted = () => {
                   </CardContent>
                   <CardFooter className="flex justify-between">
                     <div></div>
-                    <Button onClick={() => document.querySelector('[data-value="analyze"]')?.click()}>
+                    <Button
+                      onClick={() => {
+                        const analyzeTab = document.querySelector('[data-value="analyze"]') as HTMLButtonElement;
+                        if (analyzeTab) analyzeTab.click();
+                      }}
+                    >
                       Next: Analyze Your Code
                       <ArrowRight size={16} className="ml-2" />
                     </Button>
@@ -93,7 +98,7 @@ const GetStarted = () => {
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                      <Lightning size={20} className="text-blue-600" />
+                      <BoltIcon size={20} className="text-blue-600" />
                       Step 2: Analyzing Gas Usage
                     </CardTitle>
                     <CardDescription>
@@ -143,11 +148,22 @@ const GetStarted = () => {
                     </div>
                   </CardContent>
                   <CardFooter className="flex justify-between">
-                    <Button variant="outline" onClick={() => document.querySelector('[data-value="understand"]')?.click()}>
+                    <Button 
+                      variant="outline" 
+                      onClick={() => {
+                        const understandTab = document.querySelector('[data-value="understand"]') as HTMLButtonElement;
+                        if (understandTab) understandTab.click();
+                      }}
+                    >
                       <ArrowLeft size={16} className="mr-2" />
                       Previous
                     </Button>
-                    <Button onClick={() => document.querySelector('[data-value="optimize"]')?.click()}>
+                    <Button
+                      onClick={() => {
+                        const optimizeTab = document.querySelector('[data-value="optimize"]') as HTMLButtonElement;
+                        if (optimizeTab) optimizeTab.click();
+                      }}
+                    >
                       Next: Apply Strategies
                       <ArrowRight size={16} className="ml-2" />
                     </Button>
@@ -160,7 +176,7 @@ const GetStarted = () => {
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                      <Tool size={20} className="text-blue-600" />
+                      <WrenchIcon size={20} className="text-blue-600" />
                       Step 3: Applying Optimization Strategies
                     </CardTitle>
                     <CardDescription>
@@ -223,11 +239,22 @@ const GetStarted = () => {
                     </div>
                   </CardContent>
                   <CardFooter className="flex justify-between">
-                    <Button variant="outline" onClick={() => document.querySelector('[data-value="analyze"]')?.click()}>
+                    <Button 
+                      variant="outline" 
+                      onClick={() => {
+                        const analyzeTab = document.querySelector('[data-value="analyze"]') as HTMLButtonElement;
+                        if (analyzeTab) analyzeTab.click();
+                      }}
+                    >
                       <ArrowLeft size={16} className="mr-2" />
                       Previous
                     </Button>
-                    <Button onClick={() => document.querySelector('[data-value="implement"]')?.click()}>
+                    <Button
+                      onClick={() => {
+                        const implementTab = document.querySelector('[data-value="implement"]') as HTMLButtonElement;
+                        if (implementTab) implementTab.click();
+                      }}
+                    >
                       Next: Implementation
                       <ArrowRight size={16} className="ml-2" />
                     </Button>
@@ -331,7 +358,13 @@ const GetStarted = () => {
                     </div>
                   </CardContent>
                   <CardFooter className="flex justify-between">
-                    <Button variant="outline" onClick={() => document.querySelector('[data-value="optimize"]')?.click()}>
+                    <Button 
+                      variant="outline" 
+                      onClick={() => {
+                        const optimizeTab = document.querySelector('[data-value="optimize"]') as HTMLButtonElement;
+                        if (optimizeTab) optimizeTab.click();
+                      }}
+                    >
                       <ArrowLeft size={16} className="mr-2" />
                       Previous
                     </Button>
