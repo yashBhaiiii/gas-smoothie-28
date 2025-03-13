@@ -1,9 +1,15 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
+import { Link } from "react-router-dom";
 
-const Features = () => {
+interface FeaturesProps {
+  id?: string;
+}
+
+const Features = ({ id }: FeaturesProps) => {
   return (
-    <section className="section-padding px-4 md:px-6">
+    <section id={id} className="section-padding px-4 md:px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in">
           <div className="text-sm font-medium text-blue-600 mb-3">FEATURES</div>
@@ -30,13 +36,15 @@ const Features = () => {
           <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
             Apply these proven strategies to reduce gas costs and improve the efficiency of your Aptos Move code.
           </p>
-          <Button 
-            size="lg" 
-            className="bg-white text-blue-600 hover:bg-blue-50 group"
-          >
-            Explore Implementation Techniques
-            <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
-          </Button>
+          <Link to="/get-started">
+            <Button 
+              size="lg" 
+              className="bg-white text-blue-600 hover:bg-blue-50 group"
+            >
+              Explore Implementation Techniques
+              <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

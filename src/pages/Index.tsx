@@ -1,5 +1,6 @@
 
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import Hero from "../components/sections/Hero";
@@ -46,9 +47,9 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <AboutGas />
-        <Strategies />
-        <Features />
+        <AboutGas id="about" />
+        <Strategies id="strategies" />
+        <Features id="features" />
       </main>
       <Footer />
     </div>

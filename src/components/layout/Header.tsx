@@ -1,12 +1,13 @@
 
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +17,10 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleGetStarted = () => {
+    navigate("/get-started");
+  };
 
   return (
     <header
@@ -44,7 +49,9 @@ const Header = () => {
           <Button variant="outline" size="sm">
             Download Guide
           </Button>
-          <Button size="sm">Get Started</Button>
+          <Button size="sm" onClick={handleGetStarted}>
+            Get Started
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -91,7 +98,7 @@ const Header = () => {
             <Button variant="outline" size="sm" className="w-full">
               Download Guide
             </Button>
-            <Button size="sm" className="w-full">
+            <Button size="sm" className="w-full" onClick={handleGetStarted}>
               Get Started
             </Button>
           </div>
