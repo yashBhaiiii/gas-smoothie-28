@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Clock, Database, PackageOpen, Code } from "lucide-react";
-import Card from "../ui/Card";
+import { Card } from "../ui/card";
 
 type StrategyTab = "computation" | "storage" | "transaction" | "practices";
 

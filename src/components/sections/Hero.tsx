@@ -1,5 +1,5 @@
 
-import Button from "../ui/Button";
+import { Button } from "../ui/button";
 import { Sparkles, ArrowRight, Download } from "lucide-react";
 
 const Hero = () => {
