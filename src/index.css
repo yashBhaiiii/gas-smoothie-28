@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 260 91% 60%;
+    --primary: 217 91% 60%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -23,7 +23,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 260 34% 17%;
+    --accent: 216 34% 17%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,36 +34,6 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.75rem;
-  }
-
-  .dark {
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
-
-    --card: 222 47% 15%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 260 91% 65%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217 32% 17%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217 32% 17%;
-    --muted-foreground: 215 20.2% 75.1%;
-
-    --accent: 217 32% 17%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217 32% 17%;
-    --input: 217 32% 17%;
-    --ring: 212.7 26.8% 83.9%;
   }
 
   @font-face {
@@ -112,7 +82,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-sans antialiased dark;
+    @apply bg-background text-foreground font-sans antialiased;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -122,11 +92,11 @@
 
 @layer utilities {
   .glass {
-    @apply bg-white/10 backdrop-blur-lg border border-white/10 shadow-glass transition-all;
+    @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-glass transition-all;
   }
   
   .glass:hover {
-    @apply shadow-glass-hover bg-white/20;
+    @apply shadow-glass-hover bg-white/80;
   }
   
   .text-balance {
@@ -134,7 +104,7 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-purple-400 to-purple-300 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent;
   }
   
   .section-padding {
@@ -151,9 +121,5 @@
   
   .button-shadow:hover {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  }
-
-  .purple-gradient {
-    @apply bg-gradient-to-br from-purple-900 to-purple-700;
   }
 }
